@@ -1,8 +1,8 @@
-package com.mpt.service;
+package com.mpt.model.service;
 
 public class Validation {
 	
-	public static boolean isStringOnlyAlphabet(String str) 
+	public static boolean isCharacter(String str) 
     { 
         if((str != null) && (!str.equals("")) && (str.matches("^[a-zA-Z]*$"))) 
         	return true;
@@ -10,11 +10,11 @@ public class Validation {
     	return false;
     	
     }
-	public static  boolean password(String name) {
+	public static  boolean password(String pass) {
 		String specialCharacters="!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-		String str2[]=name.split("");
+		String str2[]=pass.split("");
 
-	if(name.length()==0) 
+	if(pass.length()==0) 
 		return false;
 	else
 	{
@@ -26,9 +26,9 @@ public class Validation {
 	}
 	}
 public static	boolean login(String usernm,String pass) {
-	boolean b=isStringOnlyAlphabet(usernm);
-	boolean c=password(pass);
-	if(b&c)
+	boolean uname=isCharacter(usernm);
+	boolean passwd=password(pass);
+	if(uname&passwd)
 		return true;
 	else
 		return false;
