@@ -9,12 +9,23 @@
 <title>Home</title>
 </head>
 <body>
-<h1>Home Page</h1>
+<h1 align="center">Home Page</h1>
  <jsp:useBean id="student" class="com.mpt.model.beans.Student" scope="request"/>
 
-${student.sid }
-${student.name }
-${student.password }
 
+
+<h2 align="center">Students Info</h2>
+<table align="center" border='1px' cellspacing='0px' cellpadding='10px'>
+	<tr><th>sid</th>
+		<th>firstname</th>
+		<th>lastname</th>
+	</tr>
+	<tr>
+	<td>${student.sid }</td>
+	<td>${student.name }</td>
+	<td>${student.password}</td>
+	</tr>
+	</table>
+					
 </body>
 </html>

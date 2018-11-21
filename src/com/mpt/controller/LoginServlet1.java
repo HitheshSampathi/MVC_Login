@@ -14,7 +14,7 @@ import com.mpt.model.beans.Student;
 import com.mpt.model.beans.UserAuth;
 import com.mpt.model.dao.DAOimpl;
 import com.mpt.model.dao.JDBCimpl;
-import com.mpt.service.Validation;
+import com.mpt.model.service.Validation;
 
 @WebServlet("/loginServs1")
 public class LoginServlet1 extends HttpServlet{
@@ -46,7 +46,7 @@ public class LoginServlet1 extends HttpServlet{
 					session.setAttribute("counts", count);
 				}
 				
-				long sesstime=time;
+				
 				long differ=currenttime-time;
 				if(differ>120000)  				//(3600000)//milliseconds for 1 hour
 					ua.time();

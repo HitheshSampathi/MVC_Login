@@ -25,6 +25,8 @@ public void setLocktime(long locktime) {
 }
 public void incCount(int attempts) {
 	this.attempts=attempts+1;
+	if(attempts>2)
+		this.lock=true;
 }
 public void time() 
 {
